@@ -6,7 +6,7 @@
 typdef int elemtype;
 
 typedef struct {
-    elemtype data;
+    elemtype *base;
     int cap;
     int len;
 } SqList;
