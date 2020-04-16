@@ -1,9 +1,9 @@
 #ifndef _SQLIST_H_
 #define _SQLIST_H_
 
-#define SQLIST_SIZE 100
+#define SQLIST_SIZE 1000
 
-typdef int elemtype;
+typedef int elemtype;
 
 typedef struct {
     elemtype *base;
@@ -12,6 +12,9 @@ typedef struct {
 } SqList;
 
 int init_sqlist(SqList *sqlist);
-
+void clear_sqlist(SqList* sqlist);
+int insert_sqlist(SqList *sqlist, int i, elemtype elem);
+int delete_sqlist(SqList *sqlist, int i);
+int locate_sqlist(SqList *sqlist, int i);
 
 #endif //_SQLIST_H_
