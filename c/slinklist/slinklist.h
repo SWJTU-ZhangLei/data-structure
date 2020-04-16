@@ -3,9 +3,11 @@
 
 define SLINKLIST_MAX_SIZE 1000
 
+typedef char ElemType;
+
 typedef struct {
     int cur;
-    char data;
+    ElemType data;
 } Component, SLinkList[SLINKLIST_MAX_SIZE];
 
 #endif //_SLINKLIST_H_
