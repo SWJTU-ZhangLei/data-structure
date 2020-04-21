@@ -6,7 +6,7 @@ typdef int TElemType;
 
 typedef enum PointerTag { Link, Thread }; // Link 0, Thread 1
 
-typdef struct ThrBiTreeNode {
+typedef struct ThrBiTreeNode {
     TElemType data;
     ThrBiTreeNode *lchild, *rchild;    
     PointerTag ltag, rtag;

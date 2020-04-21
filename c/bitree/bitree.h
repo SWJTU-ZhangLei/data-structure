@@ -2,7 +2,7 @@
 #define _BITREE_H_
 
 typedef int TElemType;
-typdef struct BiNode {
+typedef struct BiNode {
     TElemType data;
     struct BiNode lchild;
     struct BiNode rchild;
