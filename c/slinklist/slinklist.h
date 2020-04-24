@@ -10,4 +10,8 @@ typedef struct {
     ElemType data;
 } Component, SLinkList[SLINKLIST_MAX_SIZE];
 
+int init_slinklist(SLinkList* slinklist);
+void print_slinklist(SLinkList* slinklist);
+
+
 #endif //_SLINKLIST_H_
