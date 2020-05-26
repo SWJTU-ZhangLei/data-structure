@@ -11,6 +11,11 @@ typedef struct {
 } Component, SLinkList[SLINKLIST_MAX_SIZE];
 
 int init_slinklist(SLinkList* slinklist);
+
+int malloc_slinklist(SLinkList* slinklist);
+
+int free_slinklist(SLinkList* slinklist, int k);
+
 void print_slinklist(SLinkList* slinklist);
 
 

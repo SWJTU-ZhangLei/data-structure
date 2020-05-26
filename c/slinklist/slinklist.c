@@ -9,6 +9,26 @@ int init_slinklist(SLinkList* slinklist)
     }
 }
 
+int malloc_slinklist(SLinkList* slinklist)
+{
+    int i = (*slinklist)[0].cur;
+    if (i <= 0) {
+        return -1;
+    }
+    return i;
+}
+
+int free_slinklist(SLinkList* slinklist, int k)
+{
+    if (k <= 0 || k > SLINKLIST_MAX_SIZE) {
+        return -1;
+    }
+
+    (*slinklist)[k].cur =  (*slinklist)[0].cur;
+    (*slinklist)[0].cur = k;
+
+    return 0;
+}
 
 void print_slinklist(SLinkList* slinklist)
 {
