@@ -7,14 +7,14 @@
 typedef int ElemType;
 
 typedef struct {
-    elemtype *base;
+    ElemType *base;
     int cap;
     int len;
 } SqList;
 
 int init_sqlist(SqList *sqlist);
 
-int insert_sqlist(SqList *sqlist, int i, Elemtype elem);
+int insert_sqlist(SqList *sqlist, int i, ElemType elem);
 
 int delete_sqlist(SqList *sqlist, int i);
 

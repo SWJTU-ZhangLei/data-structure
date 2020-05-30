@@ -5,19 +5,19 @@ int init_sqlist(SqList* sqlist)
 {
     sqlist->base = (ElemType *)malloc(SQLIST_SIZE * sizeof(ElemType));
     if (!sqlist->base) {
-        return -1;
+        exit(1);
     }
     sqlist->cap = SQLIST_SIZE;
     sqlist->len = 0;
     return 0;
 }
 
-int insert_sqlist(Sqlist* sqlist, int i, ElemType e)
+int insert_sqlist(SqList* sqlist, int i, ElemType e)
 {
+    ElemType *newbase;
     if (i < 1 && i > (sqlist->len + 1)) {
         return -1;
     }
-    
     if (sqlist->len >= sqlist->cap) {
         newbase = (ElemType *)realloc(sqlist->base, (sqlist->len + SQLIST_INCREMENT) * sizeof(ElemType));
         if (!newbase) {
@@ -26,8 +26,7 @@ int insert_sqlist(Sqlist* sqlist, int i, ElemType e)
             sqlist->base = newbase;
         }
     }
-    
-    
+
     for (int j = sqlist->len ; j >= i; j--) {
         *(newbase + j + 1) = *(newbase+ j);
     }

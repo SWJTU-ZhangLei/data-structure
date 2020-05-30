@@ -4,9 +4,9 @@
 #define SQSTACK_INIT_SIZE 100
 #define SQSTACK_INCREAMENT 10
 
-typdef int SElemType;
+typedef int SElemType;
 
-typdef struct {
+typedef struct {
     SElemType *base;
     SElemType *top;
     int size;

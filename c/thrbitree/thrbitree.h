@@ -2,13 +2,15 @@
 
 #define _THRBITREE_H_
 
-typdef int TElemType;
+typedef int TElemType;
 
-typedef enum PointerTag { Link, Thread }; // Link 0, Thread 1
+typedef enum { 
+    Link, Thread 
+} PointerTag; // Link 0, Thread 1
 
 typedef struct ThrBiTreeNode {
     TElemType data;
-    ThrBiTreeNode *lchild, *rchild;    
+    ThrBiTreeNode *lchild, *rchild;
     PointerTag ltag, rtag;
 } ThrBiTreeNode, *ThrBiTree;
 

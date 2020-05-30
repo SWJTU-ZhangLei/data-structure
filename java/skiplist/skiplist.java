@@ -1,4 +1,4 @@
-package structs;
+package skiplist;
 
 import java.util.Random;
 
