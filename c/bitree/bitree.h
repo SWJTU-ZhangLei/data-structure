@@ -3,9 +3,9 @@
 
 typedef int TElemType;
 typedef struct BiNode {
+    struct BiNode *lchild;
+    struct BiNode *rchild;
     TElemType data;
-    struct BiNode lchild;
-    struct BiNode rchild;
 } *BiTree;
 
 #endif //_BITREE_H_

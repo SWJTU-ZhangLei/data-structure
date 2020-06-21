@@ -10,13 +10,15 @@ set(DATA_STRUCTURE_VERSION_PATCH 0)
 
 option(BUILD_SHARED_LIBS "Option for generating dynamic or static library." OFF)
 
+add_subdirectory(sqlist)
 add_subdirectory(slinklist)
 
 include_directories(slinklist)
+include_directories(sqlist)
 #link_directories(slinklist)
 
 add_executable(data-structure main.c)
-target_link_libraries(data-structure slinklist)
+target_link_libraries(data-structure sqlist slinklist)
 
 install(TARGETS data-structure RUNTIME DESTINATION bin)
 
